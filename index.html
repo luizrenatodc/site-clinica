@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clínica Vitta · Saúde para a família</title>
+<meta name="description" content="Site de demonstração de uma clínica fictícia: especialidades, perguntas frequentes e contato.">
+<link rel="stylesheet" href="estilo.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalClinic","name":"Clínica Vitta"}</script>
+</head>
+<body>
+<header>
+  <nav><strong>Vitta</strong><a href="#especialidades">Especialidades</a><a href="#duvidas">Dúvidas</a></nav>
+  <div class="capa">
+    <h1>Cuidado de verdade, perto de você.</h1>
+    <p>Clínica fictícia, criada para demonstrar um site institucional rápido e acessível.</p>
+    <a class="botao" href="#especialidades">Ver especialidades</a>
+  </div>
+</header>
+<main>
+  <section id="especialidades">
+    <h2>Especialidades</h2>
+    <input id="busca" type="search" placeholder="Buscar especialidade" aria-label="Buscar especialidade">
+    <ul id="lista">
+      <li>Clínica geral</li><li>Pediatria</li><li>Cardiologia</li><li>Dermatologia</li><li>Nutrição</li><li>Psicologia</li>
+    </ul>
+    <p id="vazio" hidden>Nenhuma especialidade encontrada.</p>
+  </section>
+  <section id="duvidas">
+    <h2>Dúvidas frequentes</h2>
+    <details><summary>Preciso de encaminhamento?</summary><p>Não, é só marcar sua consulta.</p></details>
+    <details><summary>Quais são os horários?</summary><p>De segunda a sábado, das 7h às 19h.</p></details>
+  </section>
+</main>
+<footer>Projeto de demonstração. Conteúdo fictício.</footer>
+<script>
+  const busca = document.getElementById("busca");
+  const itens = [...document.querySelectorAll("#lista li")];
+  busca.oninput = () => {
+    const t = busca.value.toLowerCase();
+    itens.forEach((li) => { li.hidden = !li.textContent.toLowerCase().includes(t); });
+    document.getElementById("vazio").hidden = itens.some((li) => !li.hidden);
+  };
+</script>
+</body>
+</html>
