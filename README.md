@@ -6,6 +6,16 @@ Site institucional de uma clínica fictícia, com foco em clareza, acessibilidad
 
 **Demonstração:** https://luizrenatodc.github.io/site-clinica/
 
+## Veja funcionando
+
+![Página inicial.](docs/capa.png)
+
+*Página inicial.*
+
+![Busca de especialidades em tempo real.](docs/busca.png)
+
+*Busca de especialidades em tempo real.*
+
 ## Objetivo
 
 Quem procura uma clínica quer saber depressa se ela atende o que precisa. O site mostra isso logo de início, com linguagem simples e leitura confortável para qualquer idade.
